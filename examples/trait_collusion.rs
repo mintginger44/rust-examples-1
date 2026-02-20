@@ -1,6 +1,6 @@
 struct V2D {
     x: i32,
-    y: i32
+    y: i32,
 }
 
 impl V2D {
@@ -42,13 +42,12 @@ impl Trait2 for V2D {
 }
 
 fn main() {
-    let v = V2D::new(1,2);
+    let v = V2D::new(1, 2);
     // Trait1::print_it(v);
 
     // disambiguate call on associated fn on trait with name collusion
     <V2D as Trait1>::print_it();
     <V2D as Trait2>::print_it();
-
 
     // disambiguate call on methods on trait with name collusion
     <V2D as Trait1>::write_it(&v);
