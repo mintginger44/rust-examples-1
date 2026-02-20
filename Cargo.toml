@@ -1,0 +1,12 @@
+[package]
+name = "rust-examples"
+version = "0.1.0"
+edition = "2024"
+
+[[example]]
+name = "try-2"
+path = "examples/exp1/try_3.rs"
+
+[dependencies]
+clap = "4.5.41"
+
